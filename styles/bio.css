@@ -1,0 +1,325 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/Font/AvenirNextLTPro.ttf") format("true type");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/Font/AvenirNextLTProDemi.ttf") format("true type");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/Font/AvenirNextLTProBold.ttf") format("true type");
+  font-style: normal;
+  font-weight: 700;
+}
+.header {
+  font-size: 1.5rem;
+  height: 1rem;
+  font-weight: 700;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-top: 4%;
+}
+.header .logo {
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+    flex-wrap: wrap;
+    color: #ffffff;
+    margin-right: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__container {
+    margin-right: 60%;
+  }
+}
+
+nav ul {
+  margin-top: auto;
+  display: flex;
+  background-color: #323232;
+  font-size: 0.9375rem;
+  color: #ffffff;
+  height: 1.5rem;
+  font-weight: 700;
+  list-style-type: none;
+  padding-top: 2%;
+  gap: 30%;
+}
+
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  height: 30vh;
+  background-color: #000000;
+  opacity: 85%;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 40vh;
+    margin-top: -5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 80vh;
+  }
+}
+
+.hero__header {
+  color: #ffffff;
+  padding-left: 0.8125rem;
+  padding-top: 27%;
+}
+@media screen and (min-width: 768px) {
+  .hero__header {
+    font-size: xxx-large;
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__header {
+    padding-left: 5rem;
+    padding-top: 11.875rem;
+  }
+}
+
+h1 {
+  position: relative;
+  left: 2.25rem;
+  bottom: 25.125rem;
+  font-size: 4.8125rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+.body {
+  font-family: "AvenirNext", Arial, sans-serif;
+}
+
+h2 h3 {
+  color: #323232;
+}
+
+.band__img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .band__img {
+    width: 80%;
+    height: 30vh;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .band__img {
+    width: 65%;
+    height: 60vh;
+    margin-left: 7.1875rem;
+  }
+}
+
+.about {
+  color: #323232;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  #bryan {
+    font-size: small;
+    margin-bottom: 50px;
+  }
+}
+
+.about__quote h3 {
+  display: flex;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .about__quote {
+    width: 68%;
+    margin-left: 13%;
+    font-size: large;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__quote {
+    width: 58%;
+    margin-left: 18%;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #about__musicians {
+    padding-left: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #about__musicians {
+    padding-left: 120px;
+    font-size: xx-large;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__info--title {
+    padding-left: 60px;
+    font-weight: 700;
+    font-size: x-large;
+    color: #000000;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__info--title {
+    padding-left: 165px;
+    font-weight: 700;
+    font-size: x-large;
+    color: #000000;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 12%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .aboutcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 170px;
+    padding-right: 170px;
+    gap: 6%;
+  }
+}
+
+.gallery {
+  padding: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    width: 30%;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #photo__gallery {
+    padding-left: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #photo__gallery {
+    padding-left: 120px;
+    font-size: xx-large;
+  }
+}
+
+.gallery__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery__img {
+    height: auto;
+  }
+}
+
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .gallery__container {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+.footer__section {
+  background-color: #323232;
+  color: #ffffff;
+}
+.footer__section p {
+  margin-left: 7%;
+}
+
+#getintouch {
+  margin-left: 7%;
+  padding-top: 10%;
+  margin-top: 0.25rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 170px;
+    gap: 3%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container2 {
+    justify-content: space-evenly;
+    margin-top: -85px;
+    gap: 3%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__container2 {
+    justify-content: space-evenly;
+    margin-top: -50px;
+    margin-right: 0px;
+  }
+}
+
+.footer__logo {
+  margin-top: 15%;
+  margin-left: 7%;
+}
+
+#copyright {
+  padding-left: 1%;
+}/*# sourceMappingURL=bio.css.map */

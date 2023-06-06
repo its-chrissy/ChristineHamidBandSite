@@ -1,0 +1,280 @@
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
+//*header*//
+
+.header {
+  font-size: 1.5rem;
+  height: 1rem;
+  font-weight: 700;
+  background-color: $bandsiteblack;
+  display: flex;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-top: 4%;
+  .logo {
+    color: $white;
+  }
+  @include tablet {
+    height: 4rem;
+  }
+}
+
+.header__container {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    color: $white;
+    margin-right: 50%;
+  }
+  @include desktop {
+    margin-right: 60%;
+  }
+}
+nav {
+  ul {
+    margin-top: auto;
+    display: flex;
+    background-color: $bandsiteblack;
+    font-size: 0.9375rem;
+    color: $white;
+    height: 1.5rem;
+    font-weight: 700;
+    list-style-type: none;
+    padding-top: 2%;
+    gap: 30%;
+  }
+}
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  height: 30vh;
+  background-color: $bandsite-darkblack;
+  opacity: 85%;
+  @include tablet {
+    height: 40vh;
+    margin-top: -5%;
+  }
+  @include desktop {
+    height: 80vh;
+  }
+}
+
+.hero__header {
+  color: $white;
+  padding-left: 0.8125rem;
+  padding-top: 27%;
+  @include tablet {
+    font-size: xxx-large;
+    padding-left: 3rem;
+  }
+  @include desktop {
+    padding-left: 5rem;
+    padding-top: 11.875rem;
+  }
+}
+
+h1 {
+  position: relative;
+  left: 2.25rem;
+  bottom: 25.125rem;
+  font-size: 4.8125rem;
+  color: $bandsite-darkblack;
+  font-weight: 700;
+}
+
+//*sections*//
+
+.body {
+  font-family: "AvenirNext", Arial, sans-serif;
+}
+
+h2 h3 {
+  color: $bandsiteblack;
+}
+
+.band__img {
+  width: 100%;
+  height: 100%;
+  @include tablet {
+    width: 80%;
+    height: 30vh;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+  @include desktop {
+    width: 65%;
+    height: 60vh;
+    margin-left: 7.1875rem;
+  }
+}
+
+.about {
+  color: $bandsiteblack;
+  text-align: left;
+}
+
+#bryan {
+  @include tablet {
+    font-size: small;
+    margin-bottom: 50px;
+  }
+}
+
+.about__quote {
+  h3 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  @include tablet {
+    width: 68%;
+    margin-left: 13%;
+    font-size: large;
+  }
+  @include desktop {
+    width: 58%;
+    margin-left: 18%;
+    font-size: large;
+  }
+}
+
+#about__musicians {
+  @include tablet {
+    padding-left: 30px;
+  }
+  @include desktop {
+    padding-left: 120px;
+    font-size: xx-large;
+  }
+}
+
+.about__info--title {
+  @include tablet {
+    padding-left: 60px;
+    font-weight: 700;
+    font-size: x-large;
+    color: $bandsite-darkblack;
+  }
+  @include desktop {
+    padding-left: 165px;
+    font-weight: 700;
+    font-size: x-large;
+    color: $bandsite-darkblack;
+  }
+}
+
+.aboutcontainer {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 12%;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 170px;
+    padding-right: 170px;
+    gap: 6%;
+  }
+}
+
+.gallery {
+  padding: 0.25rem;
+  @include tablet {
+    width: 30%;
+    padding: 10px;
+  }
+}
+
+#photo__gallery {
+  @include tablet {
+    padding-left: 30px;
+  }
+  @include desktop {
+    padding-left: 120px;
+    font-size: xx-large;
+  }
+}
+
+.gallery__img {
+  max-width: 100%;
+  max-height: 100%;
+  @include tablet {
+    height: auto;
+  }
+}
+
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include desktop {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+//*footer*//
+.footer__section {
+  background-color: $bandsiteblack;
+  color: $white;
+  p {
+    margin-left: 7%;
+  }
+}
+
+#getintouch {
+  margin-left: 7%;
+  padding-top: 10%;
+  margin-top: 0.25rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 60%;
+}
+
+.footer__container {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 170px;
+    gap: 3%;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 60px;
+  }
+}
+
+.footer__container2 {
+  @include tablet {
+    justify-content: space-evenly;
+    margin-top: -85px;
+    gap: 3%;
+  }
+  @include desktop {
+    justify-content: space-evenly;
+    margin-top: -50px;
+    margin-right: 0px;
+  }
+}
+
+.footer__logo {
+  margin-top: 15%;
+  margin-left: 7%;
+}
+
+#copyright {
+  padding-left: 1%;
+}
