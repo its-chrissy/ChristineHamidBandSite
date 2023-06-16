@@ -1,18 +1,18 @@
 @font-face {
-  font-family: "AvenirNext";
-  src: url("../../assets/Font/AvenirNextLTPro.ttf") format("true type");
+  font-family: "AvenirNext-normal";
+  src: url("../../assets/Font/AvenirNextLTPro.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: "AvenirNext";
-  src: url("../../assets/Font/AvenirNextLTProDemi.ttf") format("true type");
+  font-family: "AvenirNext-semi-bold";
+  src: url("../../assets/Font/AvenirNextLTProDemi.ttf") format("truetype");
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
-  font-family: "AvenirNext";
-  src: url("../../assets/Font/AvenirNextLTProBold.ttf") format("true type");
+  font-family: "AvenirNext-bold";
+  src: url("../../assets/Font/AvenirNextLTProBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
@@ -109,8 +109,8 @@ h1 {
   font-weight: 700;
 }
 
-.body {
-  font-family: "AvenirNext", Arial, sans-serif;
+body {
+  font-family: "AvenirNext-normal", Times, sans-serif;
 }
 
 h2 h3 {
@@ -168,6 +168,9 @@ h2 h3 {
   }
 }
 
+#about__musicians {
+  font-family: "AvenirNext-semi-bold";
+}
 @media screen and (min-width: 768px) {
   #about__musicians {
     padding-left: 30px;
@@ -180,6 +183,9 @@ h2 h3 {
   }
 }
 
+.about__info--title {
+  font-family: "AvenirNext-semi-bold";
+}
 @media screen and (min-width: 768px) {
   .about__info--title {
     padding-left: 60px;
@@ -228,6 +234,9 @@ h2 h3 {
   }
 }
 
+#photo__gallery {
+  font-family: "AvenirNext-semi-bold";
+}
 @media screen and (min-width: 768px) {
   #photo__gallery {
     padding-left: 30px;
@@ -280,8 +289,12 @@ h2 h3 {
   display: flex;
   justify-content: space-evenly;
   margin-right: 60%;
+  border: 1px solid red;
 }
 
+.footer__container {
+  border: 1px solid pink;
+}
 @media screen and (min-width: 768px) {
   .footer__container {
     display: flex;
@@ -300,6 +313,9 @@ h2 h3 {
   }
 }
 
+.footer__container2 {
+  border: 1px solid rgb(43, 255, 0);
+}
 @media screen and (min-width: 768px) {
   .footer__container2 {
     justify-content: space-evenly;
@@ -318,8 +334,10 @@ h2 h3 {
 .footer__logo {
   margin-top: 15%;
   margin-left: 7%;
+  border: 1px solid yellow;
 }
 
 #copyright {
   padding-left: 1%;
+  border: 1px solid chocolate;
 }/*# sourceMappingURL=bio.css.map */
