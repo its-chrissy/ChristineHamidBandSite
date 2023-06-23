@@ -30,6 +30,7 @@
       <h2 class="hero__header">The Bees Knees</h2>
     </div>
     <!-------sections------->
+     <!-------about section------->
     <section class="about__section">
       <div class="about">
         <h2 id="about__musicians">About the Musicians</h2>
@@ -76,6 +77,7 @@
         </div>
       </div>
     </section>
+    <!-------gallery section------->
     <section class="gallery__section">
            <h2 id="photo__gallery">Photo Gallery</h2>
       <div class="gallery__container">
@@ -144,31 +146,60 @@
         </div>
       </div>
     </section>
+    <!-------join conversation section------->
+<section class="join-conversation">
+  <h2>Join The Conversation</h2>
+				<section class="join-textbox-section">
+					<div class="join-textbox">
+						<div class="join-textbox__img">
+							<img src="./assets/images/man.png" />
+						</div>
+						<div class="join-textbox__name">
+              <p>NAME</p>
+							<input
+								type="text"
+								placeholder="Enter your name"
+								class="textbox-comment-data"/>
+						</div>
+            <div class="join-textbox__comment">
+               <p>COMMENT</p>
+							<input
+								type="text"
+								placeholder="Add a new comment"
+								class="textbox-comment-data"/>
+						</div>
+					</div>
+          <div class="textbox__comment-btn">
+						<button onclick="createComment()">COMMENT</button>
+					</div>
+  </section>
     <!-------footer------->
     <footer class="footer__section">
-      <h2 id="getintouch">Get in Touch</h2>
+      <div class="box1">
+      <h2 id="getintouch">Get in Touch</h2> 
       <div class="socials">
         <a href="https://www.instagram.com/"
           ><img
-            class="socials__insta"
+            class="socials__icon"
             src="./assets/Icons/SVG/Icon-instagram.svg"
             alt="instagram"
         /></a>
         <a href="https://www.facebook.com/"
           ><img
-            class="socials__fb"
+            class="socials__icon"
             src="./assets/Icons/SVG/Icon-facebook.svg"
             alt="facebook"
         /></a>
         <a href="https://www.twitter.com/"
           ><img
-            class="social__twitter"
+            class="socials__icon"
             src="./assets/Icons/SVG/Icon-twitter.svg"
             alt="twitter"
         /></a>
+        </div>
       </div>
-      <div class="footer__container">
-        <div class="footer1">
+      <div class="box2">
+        <div class="contact1">
         <div id="Cam">
           <p>
             <b>Cam Adams<br />The Bees Knees Management</b>
@@ -180,8 +211,8 @@
         <div class="email">
           <p>info@thebeesknees.com</p>
         </div>
-      </div>
-      <div class="footer2">
+      </div>                        
+      <div class="contact2">
         <div id="Pearl">
           <p>
             <b>Pearl Gregg<br />Limitless Artist Group</b>
@@ -194,7 +225,7 @@
           <p>pearl.gregg@limitlessag.com</p>
         </div>
         </div>
-        <div class="footer3">
+        <div class="contact3">
         <div id="Carson">
           <p>
             <b>Carson Whyte<br />ARCH Entertainment</b>
@@ -207,15 +238,17 @@
           <p>cwhyte@archentertainment.com</p>
         </div>
         </div>
-        <div class="footer__container2">
+      </div>
+        <div class="box3">
         <img
             class="footer__logo"
             src="./assets/Logo/Logo-bandsite.svg"
             alt="bandsite logo"
         />
         </div>
-        <div class="footer__container3">
-        <p id="copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>    
+        <div class="box4">
+        <p id="copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p> 
+        </div>  
     </div>
     </footer>
   </body>

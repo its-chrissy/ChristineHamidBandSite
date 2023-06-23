@@ -232,57 +232,100 @@ h2 h3 {
   }
 }
 
+.box1 {
+  border: 3px solid red;
+  @include tablet {
+    width: 50%;
+    height: 25%;
+  }
+}
+
 #getintouch {
   margin-left: 7%;
   padding-top: 10%;
   margin-top: 0.25rem;
+  font-size: x-large;
+  @include tablet {
+    font-size: xx-large;
+  }
 }
-
 .socials {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   margin-right: 60%;
-  border: 1px solid red;
+  justify-content: space-evenly;
+  border: 1px solid blueviolet;
+  @include tablet {
+    margin-top: -64px;
+    padding-left: 20%;
+    margin-left: 40%;
+    width: 40%;
+    @include desktop {
+      padding-left: 1%;
+      margin-left: 35%;
+      width: 35%;
+    }
+  }
 }
 
-.footer__container {
+.socials__icon {
+  @include tablet {
+    height: 24px;
+  }
+}
+
+.box2 {
+  @include tablet {
+    border: 3px solid rgb(64, 0, 255);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  @include desktop {
+    gap: 60px;
+  }
+}
+
+.contact1 {
   border: 1px solid pink;
   @include tablet {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 170px;
+    margin-left: 1;
     gap: 3%;
   }
   @include desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 60px;
+    margin-left: 40px;
   }
 }
 
-.footer__container2 {
-  border: 1px solid rgb(43, 255, 0);
+.contact2 {
+  border: 1px solid rgb(255, 78, 225);
+}
+
+.contact3 {
+  border: 1px solid rgb(211, 157, 202);
+}
+
+.box3 {
+  border: 3px solid rgb(202, 21, 21);
+  padding-top: 0px;
   @include tablet {
-    justify-content: space-evenly;
-    margin-top: -85px;
-    gap: 3%;
   }
   @include desktop {
-    justify-content: space-evenly;
-    margin-top: -50px;
-    margin-right: 0px;
   }
 }
 
 .footer__logo {
   margin-top: 15%;
   margin-left: 7%;
-  border: 1px solid yellow;
+}
+
+.box4 {
+  border: 3px solid rgb(38, 0, 255);
 }
 
 #copyright {
   padding-left: 1%;
-  border: 1px solid chocolate;
 }

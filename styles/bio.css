@@ -279,65 +279,110 @@ h2 h3 {
   margin-left: 7%;
 }
 
+.box1 {
+  border: 3px solid red;
+}
+@media screen and (min-width: 768px) {
+  .box1 {
+    width: 50%;
+    height: 25%;
+  }
+}
+
 #getintouch {
   margin-left: 7%;
   padding-top: 10%;
   margin-top: 0.25rem;
+  font-size: x-large;
+}
+@media screen and (min-width: 768px) {
+  #getintouch {
+    font-size: xx-large;
+  }
 }
 
 .socials {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   margin-right: 60%;
-  border: 1px solid red;
+  justify-content: space-evenly;
+  border: 1px solid blueviolet;
+}
+@media screen and (min-width: 768px) {
+  .socials {
+    margin-top: -64px;
+    padding-left: 20%;
+    margin-left: 40%;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  .socials {
+    padding-left: 1%;
+    margin-left: 35%;
+    width: 35%;
+  }
 }
 
-.footer__container {
+@media screen and (min-width: 768px) {
+  .socials__icon {
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .box2 {
+    border: 3px solid rgb(64, 0, 255);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .box2 {
+    gap: 60px;
+  }
+}
+
+.contact1 {
   border: 1px solid pink;
 }
 @media screen and (min-width: 768px) {
-  .footer__container {
+  .contact1 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 170px;
+    margin-left: 1;
     gap: 3%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .footer__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 60px;
+  .contact1 {
+    margin-left: 40px;
   }
 }
 
-.footer__container2 {
-  border: 1px solid rgb(43, 255, 0);
-}
-@media screen and (min-width: 768px) {
-  .footer__container2 {
-    justify-content: space-evenly;
-    margin-top: -85px;
-    gap: 3%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .footer__container2 {
-    justify-content: space-evenly;
-    margin-top: -50px;
-    margin-right: 0px;
-  }
+.contact2 {
+  border: 1px solid rgb(255, 78, 225);
 }
 
+.contact3 {
+  border: 1px solid rgb(211, 157, 202);
+}
+
+.box3 {
+  border: 3px solid rgb(202, 21, 21);
+  padding-top: 0px;
+}
 .footer__logo {
   margin-top: 15%;
   margin-left: 7%;
-  border: 1px solid yellow;
+}
+
+.box4 {
+  border: 3px solid rgb(38, 0, 255);
 }
 
 #copyright {
   padding-left: 1%;
-  border: 1px solid chocolate;
 }/*# sourceMappingURL=bio.css.map */
