@@ -17,7 +17,7 @@
   padding-top: 6%;
   padding-bottom: 13%;
   padding-left: 50px;
-  padding-right: 40px;
+  padding-right: 2.5rem;
 
   .logo {
     color: $white;
@@ -33,19 +33,19 @@
 .header__container {
   padding-bottom: 2px;
   padding-left: 2px;
-  margin-right: 70px;
-  margin-left: 70px;
+  margin-right: 4.375rem;
+  margin-left: 4.375rem;
   @include tablet {
     display: flex;
     flex-wrap: wrap;
     color: $white;
-    margin-right: 468px;
+    margin-right: 29.25rem;
     margin-left: 2%;
-    padding-right: 150px;
+    padding-right: 9.375rem;
     padding-left: 30px;
   }
   @include desktop {
-    margin-right: 968px;
+    margin-right: 60.5rem;
   }
 }
 .nav {
@@ -60,7 +60,7 @@
     list-style-type: none;
     padding-top: 1px;
     padding-bottom: 1px;
-    padding-right: 100px;
+    padding-right: 6.25rem;
     padding-left: 10px;
     gap: 80%;
     margin-right: 20px;
@@ -76,8 +76,8 @@
     margin-right: 200px;
   }
   @include desktop {
-    margin-left: 240px;
-    margin-right: 700px;
+    margin-left: 15rem;
+    margin-right: 43.75rem;
   }
 }
 
@@ -194,7 +194,7 @@ h2 h3 {
     color: $bandsite-darkblack;
   }
   @include desktop {
-    padding-left: 165px;
+    padding-left: 10.3125rem;
     font-weight: 700;
     font-size: x-large;
     color: $bandsite-darkblack;
@@ -215,7 +215,6 @@ h2 h3 {
     flex-direction: row;
     justify-content: space-evenly;
     padding-left: 170px;
-    padding-right: 170px;
     gap: 6%;
   }
 }
@@ -224,7 +223,7 @@ h2 h3 {
   padding: 0.25rem;
   @include tablet {
     width: 30%;
-    padding: 10px;
+    padding: 0.625rem;
   }
 }
 
@@ -234,7 +233,7 @@ h2 h3 {
     padding-left: 30px;
   }
   @include desktop {
-    padding-left: 120px;
+    padding-left: 7.5rem;
     font-size: xx-large;
   }
 }
@@ -267,6 +266,9 @@ h2 h3 {
       margin-left: 20px;
       margin-top: 50px;
     }
+    @include desktop {
+      margin-left: 10.625rem;
+    }
   }
 }
 
@@ -288,6 +290,9 @@ h2 h3 {
     @include tablet {
       margin-left: 60px;
     }
+    @include desktop {
+      margin-left: 300px;
+    }
   }
 }
 
@@ -300,6 +305,9 @@ h2 h3 {
     @include tablet {
       margin-left: 30px;
       margin-top: -50px;
+    }
+    @include desktop {
+      margin-left: 300px;
     }
   }
 }
@@ -314,6 +322,9 @@ h2 h3 {
     @include tablet {
       margin-left: 30px;
     }
+    @include desktop {
+      margin-left: 300px;
+    }
   }
 }
 
@@ -325,6 +336,10 @@ h2 h3 {
   @include tablet {
     margin-left: 30px;
     width: 85%;
+  }
+  @include desktop {
+    margin-left: 300px;
+    width: 40%;
   }
 }
 
@@ -345,6 +360,9 @@ h2 h3 {
       margin-top: 20px;
       width: 160px;
     }
+    @include desktop {
+      margin-left: 43.75rem;
+    }
   }
 }
 
@@ -356,8 +374,8 @@ h2 h3 {
     padding-left: 3.125rem;
   }
   @include desktop {
-    padding-right: 15.625rem;
-    padding-left: 15.625rem;
+    padding-right: 25rem;
+    padding-left: 25rem;
   }
 }
 
@@ -396,6 +414,8 @@ h2 h3 {
   color: $silver;
   font-weight: 400;
   padding-top: 10px;
+  @include desktop {
+  }
 }
 
 .comments__content {

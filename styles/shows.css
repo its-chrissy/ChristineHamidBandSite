@@ -105,7 +105,7 @@
   background-size: cover;
   height: 45vh;
   background-color: #000000;
-  opacity: 85%;
+  opacity: 90%;
   margin-top: -20px;
 }
 @media screen and (min-width: 768px) {
@@ -127,7 +127,6 @@
 }
 @media screen and (min-width: 768px) {
   .hero__header {
-    font-size: xxx-large;
     padding-left: 3rem;
   }
 }
@@ -145,6 +144,39 @@ h1 {
   font-size: 4.8125rem;
   color: #000000;
   font-weight: 700;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+.herowords {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero__box1 {
+  margin-bottom: -80px;
+  margin-right: 110px;
+  margin-top: -30px;
+}
+@media screen and (min-width: 768px) {
+  #hero__box1 {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero__box1 {
+    margin-bottom: -220px;
+  }
+}
+
+#hero__box2 {
+  width: 60%;
+}
+
+.soundcloud {
+  padding-left: 20px;
 }
 
 body {
