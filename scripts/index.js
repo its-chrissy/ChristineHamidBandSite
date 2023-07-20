@@ -1,72 +1,148 @@
-const displayComment = () => {
-  let textbox1Elemnts = document.querySelectorAll(".join-textbox1");
-  for (const element of textbox1Elemnts) {
-    element.innerHTML = userProfile.username;
-  }
+let comments = [
+  {
+    name: "Connor Walton",
+    timestamp: "02/17/2021",
+    comment:
+      "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+  },
+  {
+    name: "Connor Walton2",
+    timestamp: "02/17/2021",
+    comment:
+      "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+  },
+  {
+    name: "Connor Walton3",
+    timestamp: "02/17/2021",
+    comment:
+      "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+  },
+];
 
-  let textbox1ImgElement = document.querySelector(".join-textbox1__img");
-  textbox1ImgElement.src = userProfile.profilePicture;
+const displayComments = () => {
+  console.log(comments);
+ 
+  // Show all the default comments
 
-  let textbox1Name = document.querySelector(".join-textbox1__name");
-  textbox1Name.innerHTML = userProfile.jobTitle;
+  /*
 
-  let textbox1Comment = document.querySelector(".join-textbox1__comment");
-  textbox1Comment.innerHTML = userProfile.jobTitle;
+     -- Parent
+            <div class="comments__item">
+              <div class="comments__item--img"> 
+                 <img src="./assets/Images/grey_image.jpg"/> 
+              
+              </div>
+
+              <div class="comments__namedate">
+                <div class="comments__name">Connor Walton</div>
+                <div class="comments__date">02/17/2021</div>
+              </div>
+              
+              <div class="comments__content">
+                <p>This is art. This is inexplicable magic 
+                  expressed in the purest way, everything 
+                  that makes up this majestic work 
+                  deserves reverence. Let us appreciate 
+                  this for what it is and what it contains.
+                
+                </p>
+              </div>
+            
+            </div>
+  */
+  // Step 1 : Get the parent element class="comments__box">
+  let parentEl = document.querySelector(".comments__box");
+
+  // Step 2 : Create comment__item for no. of comments
+  let commentItem = "";
+  comments.forEach((comment) => {
+    let commentItem = document.createElement("div"); // -- parent
+    commentItem.classList.add("comments__item");
+
+    let commentItemImg = document.createElement("div");
+    commentItemImg.classList.add("comments__item--img");
+
+    // Create img
+    let img = document.createElement("img");
+    img.src = "./assets/Images/grey_image.jpg";
+    commentItemImg.appendChild(img);
+
+    let commentNameDate = document.createElement("div");
+    commentNameDate.classList.add("comments__namedate");
+
+    // Create 2 div elements
+    let commentName = document.createElement("div");
+    commentName.classList.add("comments__name");
+    commentName.innerHTML = comment.name;
+
+    let commentDate = document.createElement("div");
+    commentDate.classList.add("comments__date");
+    commentDate.innerHTML = comment.timestamp;
+
+    commentNameDate.appendChild(commentName);
+    commentNameDate.appendChild(commentDate);
+
+    let commentContent = document.createElement("div");
+    commentContent.classList.add("comments__content");
+    //create a p
+    let commentPara = document.createElement("p");
+    commentPara.innerHTML = comment.comment;
+    commentContent.appendChild(commentPara);
+
+    commentItem.appendChild(commentItemImg);
+    commentItem.appendChild(commentNameDate);
+    commentItem.appendChild(commentContent);
+
+    // Step 3: Append comment__items inside the parent
+    parentEl.appendChild(commentItem);
+  });
 };
 
-function postComment() {
-  // Get the  text from the post text box
-  let userCommentText = document.querySelector(".data-comment-text").value;
-  console.log(userCommentText);
+function postComment() => {
+  console.log();
+  // Copy the code from 58-96
+  let postComment="";
+  comments.forEach((comment) => {
 
-  // take input
-  // create Element
-  /**
- 
-<div class="comments__item">
-            <div class="comments__item--img"> <img src="." />
-            </div>
-                        <div class="comments__name">Miles Acosta</div>
-                        <div class="comments__content">
-                            <p>
-                                your text
-                            </p>
-                        </div>
-                    </div>
-**/
-  // <div class="textbox__comment-btn">
-  //		<button onclick="postComment();">COMMENT</button>
-  //	</div>
-  let postComment = document.createElement("div");
-  postComment.classList.add("comments__item");
+  let commentItem = document.createElement("div"); // -- parent
+    commentItem.classList.add("comments__item");
 
-  let postCommentName = document.createElement("div");
-  postCommentName.classList.add("comments__name");
-  postUserName.innerHTML = `${userProfile.username} Posted`;
+    let commentItemImg = document.createElement("div");
+    commentItemImg.classList.add("comments__item--img");
 
-  let postContent = document.createElement("div");
-  postContent.classList.add("comments__content");
+    // Create img
+    let img = document.createElement("img");
+    img.src = "./assets/Images/grey_image.jpg";
+    commentItemImg.appendChild(img);
 
-  let postContentPar = document.createElement("p");
-  postContentPar.innerHTML = userPostText;
+    let commentNameDate = document.createElement("div");
+    commentNameDate.classList.add("comments__namedate");
 
-  let postcommentDiv = document.createElement("div");
-  postcommentDiv.classList.add("textbox__comment-btn");
+    // Create 2 div elements
+    let commentName = document.createElement("div");
+    commentName.classList.add("comments__name");
+    commentName.innerHTML = // Form .name;
 
-  let postBtn = document.createElement("button");
-  postBtn.innerHTML = "COMMENT";
+    let commentDate = document.createElement("div");
+    commentDate.classList.add("comments__date");
+    commentDate.innerHTML = // Auto generate;
 
-  // append this new post component to the post container class post
-  postComment.appendChild(postCommentName);
-  postComment.appendChild(postContent);
-  postComment.appendChild(postlikeDiv);
+    commentNameDate.appendChild(commentName);
 
-  postContent.appendChild(postContentPar);
+    let commentContent = document.createElement("div");
+    commentContent.classList.add("comments__content");
+    //create a p
+    let commentPara = document.createElement("p");
+    commentPara.innerHTML = // From commetn;
+    commentContent.appendChild(commentPara);
 
-  postlikeDiv.appendChild(textbox__comment - btn);
+    commentItem.appendChild(commentItemImg);
+    commentItem.appendChild(commentNameDate);
+    commentItem.appendChild(commentContent);
 
-  document.querySelector(".comments").prepend(postComment);
+     // Step 3: Append comment__items inside the parent
+     parentEl.appendChild(commentItem);
+});
 }
 
-// Function calls
-displayComment();
+displayComments();
