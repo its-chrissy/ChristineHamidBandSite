@@ -388,20 +388,39 @@ h2 h3 {
   }
 }
 
-.data-comment-text {
+.textarea_name {
   background-color: #fafafa;
   border-color: #e1e1e1;
   border-radius: 5px;
   font-family: "AvenirNext-normal";
 }
 @media screen and (min-width: 768px) {
-  .data-comment-text {
+  .textarea_name {
     margin-left: 30px;
     width: 85%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .data-comment-text {
+  .textarea_name {
+    margin-left: 300px;
+    width: 40%;
+  }
+}
+
+.textarea_comment {
+  background-color: #fafafa;
+  border-color: #e1e1e1;
+  border-radius: 5px;
+  font-family: "AvenirNext-normal";
+}
+@media screen and (min-width: 768px) {
+  .textarea_comment {
+    margin-left: 30px;
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .textarea_comment {
     margin-left: 300px;
     width: 40%;
   }

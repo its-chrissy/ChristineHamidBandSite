@@ -1,57 +1,31 @@
 let comments = [
   {
     name: "Connor Walton",
-    timestamp: "02/17/2021",
+    date: "02/17/2021",
     comment:
       "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
   {
     name: "Connor Walton2",
-    timestamp: "02/17/2021",
+    date: "02/17/2021",
     comment:
       "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
   {
     name: "Connor Walton3",
-    timestamp: "02/17/2021",
+    date: "02/17/2021",
     comment:
       "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
 ];
+let parentEl = document.querySelector(".comments__box");
 
 const displayComments = () => {
   console.log(comments);
- 
+
   // Show all the default comments
 
-  /*
-
-     -- Parent
-            <div class="comments__item">
-              <div class="comments__item--img"> 
-                 <img src="./assets/Images/grey_image.jpg"/> 
-              
-              </div>
-
-              <div class="comments__namedate">
-                <div class="comments__name">Connor Walton</div>
-                <div class="comments__date">02/17/2021</div>
-              </div>
-              
-              <div class="comments__content">
-                <p>This is art. This is inexplicable magic 
-                  expressed in the purest way, everything 
-                  that makes up this majestic work 
-                  deserves reverence. Let us appreciate 
-                  this for what it is and what it contains.
-                
-                </p>
-              </div>
-            
-            </div>
-  */
   // Step 1 : Get the parent element class="comments__box">
-  let parentEl = document.querySelector(".comments__box");
 
   // Step 2 : Create comment__item for no. of comments
   let commentItem = "";
@@ -77,7 +51,7 @@ const displayComments = () => {
 
     let commentDate = document.createElement("div");
     commentDate.classList.add("comments__date");
-    commentDate.innerHTML = comment.timestamp;
+    commentDate.innerHTML = comment.date;
 
     commentNameDate.appendChild(commentName);
     commentNameDate.appendChild(commentDate);
@@ -98,51 +72,41 @@ const displayComments = () => {
   });
 };
 
-function postComment() => {
-  console.log();
-  // Copy the code from 58-96
-  let postComment="";
-  comments.forEach((comment) => {
+// Add the new comment at the beginning of the array (newest at the top)
+const form = document.getElementById("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = document.querySelector(".textarea_name").value;
+  const date = new Date();
+  const comment = document.querySelector(".textarea_comment").value;
 
-  let commentItem = document.createElement("div"); // -- parent
-    commentItem.classList.add("comments__item");
+  if (name && comment) {
+    const newComment = {
+      name: name,
+      date: formatDate(date),
+      comment: comment,
+    };
 
-    let commentItemImg = document.createElement("div");
-    commentItemImg.classList.add("comments__item--img");
-
-    // Create img
-    let img = document.createElement("img");
-    img.src = "./assets/Images/grey_image.jpg";
-    commentItemImg.appendChild(img);
-
-    let commentNameDate = document.createElement("div");
-    commentNameDate.classList.add("comments__namedate");
-
-    // Create 2 div elements
-    let commentName = document.createElement("div");
-    commentName.classList.add("comments__name");
-    commentName.innerHTML = // Form .name;
-
-    let commentDate = document.createElement("div");
-    commentDate.classList.add("comments__date");
-    commentDate.innerHTML = // Auto generate;
-
-    commentNameDate.appendChild(commentName);
-
-    let commentContent = document.createElement("div");
-    commentContent.classList.add("comments__content");
-    //create a p
-    let commentPara = document.createElement("p");
-    commentPara.innerHTML = // From commetn;
-    commentContent.appendChild(commentPara);
-
-    commentItem.appendChild(commentItemImg);
-    commentItem.appendChild(commentNameDate);
-    commentItem.appendChild(commentContent);
-
-     // Step 3: Append comment__items inside the parent
-     parentEl.appendChild(commentItem);
+    comments.unshift(newComment);
+    parentEl.innerText = "";
+    displayComments();
+    clearInput();
+  }
 });
-}
 
+// Function to format the date as "month/day/year"
+const formatDate = (date) => {
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
+};
+
+// Function to clear input fields
+const clearInput = () => {
+  document.querySelector(".textarea_name").value = "";
+  document.querySelector(".textarea_comment").value = "";
+};
+
+// Display the default comments when the page loads
 displayComments();

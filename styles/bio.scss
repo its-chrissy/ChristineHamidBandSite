@@ -328,7 +328,7 @@ h2 h3 {
   }
 }
 
-.data-comment-text {
+.textarea_name {
   background-color: $alabaster;
   border-color: $mercury;
   border-radius: 5px;
@@ -342,6 +342,24 @@ h2 h3 {
     width: 40%;
   }
 }
+
+.textarea_comment {
+  background-color: $alabaster;
+  border-color: $mercury;
+  border-radius: 5px;
+  font-family: "AvenirNext-normal";
+  @include tablet {
+    margin-left: 30px;
+    width: 85%;
+  }
+  @include desktop {
+    margin-left: 300px;
+    width: 40%;
+  }
+}
+
+
+
 
 .textbox__comment-btn {
   & button {

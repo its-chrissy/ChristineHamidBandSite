@@ -1,5 +1,5 @@
 // Concerts data array
-let Displayshows = [
+let shows = [
   {
     date: "Tue Sept 21 2021 ",
     venue: "Ronald Lane",
@@ -32,47 +32,51 @@ let Displayshows = [
   },
 ];
 
-// Function to create concert rows dynamically
-function createConcertRow(concert) {
-  const row = document.createElement("div");
-  row.className = "concerts-table-row";
+const displayShows = () => {
+  console.log(shows);
 
-  const artistCol = document.createElement("div");
-  artistCol.textContent = concert.artist;
+  // Function to create concert rows dynamically
+  function createConcertRow(concert) {
+    const row = document.createElement("div");
+    row.className = "concerts-table-row";
 
-  const venueCol = document.createElement("div");
-  venueCol.textContent = concert.venue;
+    const artistCol = document.createElement("div");
+    artistCol.textContent = concert.artist;
 
-  const cityCol = document.createElement("div");
-  cityCol.textContent = concert.city;
+    const venueCol = document.createElement("div");
+    venueCol.textContent = concert.venue;
 
-  const dateCol = document.createElement("div");
-  dateCol.textContent = concert.date;
+    const cityCol = document.createElement("div");
+    cityCol.textContent = concert.city;
 
-  row.appendChild(artistCol);
-  row.appendChild(venueCol);
-  row.appendChild(cityCol);
-  row.appendChild(dateCol);
+    const dateCol = document.createElement("div");
+    dateCol.textContent = concert.date;
 
-  // Apply different styling based on concert state
-  if (concert.state === "past") {
-    row.style.backgroundColor = "red";
-  } else if (concert.state === "upcoming") {
-    row.style.backgroundColor = "grey";
+    row.appendChild(artistCol);
+    row.appendChild(venueCol);
+    row.appendChild(cityCol);
+    row.appendChild(dateCol);
+
+    // Apply different styling based on concert state
+    if (concert.state === "past") {
+      row.style.backgroundColor = "red";
+    } else if (concert.state === "upcoming") {
+      row.style.backgroundColor = "grey";
+    }
+
+    return row;
   }
 
-  return row;
-}
+  // Function to render the concerts table
+  function renderConcertsTable() {
+    const concertsTable = document.getElementById("concerts-table");
 
-// Function to render the concerts table
-function renderConcertsTable() {
-  const concertsTable = document.getElementById("concerts-table");
-
-  // Create concert rows and append them to the table
-  for (const concert of concerts) {
-    const row = createConcertRow(concert);
+    // Create concert rows and append them to the table
+    for (const concert of concerts) {
+      const row = createConcertRow(concert);
+    }
   }
-}
+};
 
 // Call the renderConcertsTable function to generate the table
 displayShows();
