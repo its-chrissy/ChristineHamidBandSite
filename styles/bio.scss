@@ -16,17 +16,21 @@
   margin-top: auto;
   padding-top: 6%;
   padding-bottom: 13%;
-  padding-left: 50px;
+  padding-left: 3.125rem;
   padding-right: 2.5rem;
 
   .logo {
     color: $white;
   }
   @include tablet {
-    height: 4rem;
-    padding-top: 15px;
+    height: 2rem;
+    padding-top: 20px;
     padding-bottom: 1px;
     gap: 3%;
+    padding-left: 1px;
+  }
+  @include desktop {
+    padding-left: 8px;
   }
 }
 
@@ -48,16 +52,14 @@
     margin-right: 60.5rem;
   }
 }
-.nav {
+nav {
   ul {
     margin-top: -5px;
     display: flex;
     background-color: $bandsiteblack;
     font-size: 0.9375rem;
-    color: $white;
     height: 1.5rem;
     font-weight: 700;
-    list-style-type: none;
     padding-top: 1px;
     padding-bottom: 1px;
     padding-right: 6.25rem;
@@ -68,16 +70,22 @@
   & li {
     margin: 1px;
     font-weight: 100;
+    list-style-type: none;
+
+    & a {
+      color: $white;
+      text-decoration: none;
+    }
   }
 
   @include tablet {
-    margin-top: -27px;
-    margin-left: 250px;
-    margin-right: 200px;
+    margin-top: -25px;
+    margin-left: 13.75rem;
+    margin-right: 18.75rem;
   }
   @include desktop {
-    margin-left: 15rem;
-    margin-right: 43.75rem;
+    margin-left: 13.75rem;
+    margin-right: 34.375rem;
   }
 }
 
@@ -87,12 +95,14 @@
   height: 30vh;
   background-color: $bandsite-darkblack;
   opacity: 85%;
+  margin-top: -20px;
   @include tablet {
     height: 40vh;
-    margin-top: -5%;
+    margin-top: -40px;
   }
   @include desktop {
-    height: 80vh;
+    height: 70vh;
+    margin-bottom: 70px;
   }
 }
 
@@ -139,9 +149,9 @@ h2 h3 {
     padding-left: 4rem;
   }
   @include desktop {
-    width: 65%;
     height: 60vh;
-    margin-left: 7.1875rem;
+    width: 65%;
+    padding-left: 11rem;
   }
 }
 
@@ -153,7 +163,7 @@ h2 h3 {
 #bryan {
   @include tablet {
     font-size: small;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
 }
 
@@ -168,7 +178,6 @@ h2 h3 {
     font-size: large;
   }
   @include desktop {
-    width: 58%;
     margin-left: 18%;
     font-size: large;
   }
@@ -177,10 +186,10 @@ h2 h3 {
 #about__musicians {
   font-family: "AvenirNext-semi-bold";
   @include tablet {
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
   @include desktop {
-    padding-left: 120px;
+    padding-left: 7.5rem;
     font-size: xx-large;
   }
 }
@@ -188,7 +197,7 @@ h2 h3 {
 .about__info--title {
   font-family: "AvenirNext-semi-bold";
   @include tablet {
-    padding-left: 60px;
+    padding-left: 3.75rem;
     font-weight: 700;
     font-size: x-large;
     color: $bandsite-darkblack;
@@ -204,18 +213,19 @@ h2 h3 {
 .aboutcontainer {
   @include tablet {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
     gap: 12%;
-  }
-  @include desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-left: 170px;
-    gap: 6%;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      gap: 6%;
+      padding-left: 10rem;
+      padding-right: 10rem;
+      font-size: small;
+    }
   }
 }
 
@@ -230,7 +240,7 @@ h2 h3 {
 #photo__gallery {
   font-family: "AvenirNext-semi-bold";
   @include tablet {
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
   @include desktop {
     padding-left: 7.5rem;
@@ -263,11 +273,12 @@ h2 h3 {
     color: $bandsiteblack;
     font-family: "AvenirNext-semi-bold";
     @include tablet {
-      margin-left: 20px;
-      margin-top: 50px;
+      margin-left: 1.25rem;
+      margin-top: 3.125rem;
     }
     @include desktop {
-      margin-left: 10.625rem;
+      padding-left: 100px;
+      font-size: xx-large;
     }
   }
 }
@@ -291,39 +302,39 @@ h2 h3 {
       margin-left: 60px;
     }
     @include desktop {
-      margin-left: 300px;
+      margin-left: 250px;
     }
   }
 }
 
 .join-textbox1__name {
-  padding-left: 90px;
+  padding-left: 5.625rem;
   & p {
     color: $silver;
     font-size: x-small;
     font-weight: 600;
     @include tablet {
-      margin-left: 30px;
+      margin-left: 1.875rem;
       margin-top: -50px;
     }
     @include desktop {
-      margin-left: 300px;
+      margin-left: 235px;
     }
   }
 }
 
 .join-textbox1__comment {
-  padding-left: 90px;
+  padding-left: 5.625rem;
 
   & p {
     color: $silver;
     font-size: x-small;
     font-weight: 600;
     @include tablet {
-      margin-left: 30px;
+      margin-left: 1.875rem;
     }
     @include desktop {
-      margin-left: 300px;
+      margin-left: 235px;
     }
   }
 }
@@ -334,12 +345,12 @@ h2 h3 {
   border-radius: 5px;
   font-family: "AvenirNext-normal";
   @include tablet {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     width: 85%;
   }
   @include desktop {
-    margin-left: 300px;
-    width: 40%;
+    margin-left: 235px;
+    width: 47%;
   }
 }
 
@@ -349,37 +360,35 @@ h2 h3 {
   border-radius: 5px;
   font-family: "AvenirNext-normal";
   @include tablet {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     width: 85%;
   }
   @include desktop {
-    margin-left: 300px;
-    width: 40%;
+    margin-left: 235px;
+    width: 47%;
   }
 }
 
-
-
-
 .textbox__comment-btn {
   & button {
-    margin-left: 90px;
+    margin-left: 5.625rem;
     background-color: $bandsiteblack;
     color: $alabaster;
     width: 15.6rem;
     height: 2.3125rem;
     border-radius: 5px;
     border-color: $bandsiteblack;
-    margin-bottom: 10px;
+    margin-bottom: 1.5625rem;
+    margin-top: 10px;
     @include tablet {
-      width: 200px;
-      margin-left: 525px;
-      margin-bottom: 30px;
-      margin-top: 20px;
-      width: 160px;
+      width: 12.5rem;
+      margin-left: 32.8125rem;
+      margin-bottom: 1.875rem;
+      margin-top: 1.25rem;
+      width: 10rem;
     }
     @include desktop {
-      margin-left: 43.75rem;
+      margin-left: 600px;
     }
   }
 }
@@ -392,8 +401,8 @@ h2 h3 {
     padding-left: 3.125rem;
   }
   @include desktop {
-    padding-right: 25rem;
-    padding-left: 25rem;
+    padding-right: 15rem;
+    padding-left: 15rem;
   }
 }
 
@@ -417,7 +426,7 @@ h2 h3 {
     gap: 25.9375rem;
   }
   @include desktop {
-    gap: 31.875rem;
+    gap: 300px;
   }
 }
 
@@ -438,6 +447,11 @@ h2 h3 {
 
 .comments__content {
   margin-left: 3.125rem;
+  @include tablet {
+  }
+  @include desktop {
+    width: 497px;
+  }
 }
 
 //*footer*//
@@ -484,7 +498,7 @@ h2 h3 {
     margin-left: 40%;
     width: 40%;
     @include desktop {
-      padding-left: 1%;
+      padding-left: 6%;
       margin-left: 35%;
       width: 35%;
     }
@@ -493,7 +507,7 @@ h2 h3 {
 
 .names {
   padding-left: 23px;
-  width: 220px;
+  width: 13.75rem;
 }
 
 .socials__icon {
@@ -512,10 +526,10 @@ h2 h3 {
     padding-top: 40px;
   }
   @include desktop {
-    gap: 30px;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    margin-left: 50px;
+    gap: 1.875rem;
+    padding-top: 3.75rem;
+    padding-bottom: 1.875rem;
+    margin-left: 2.5rem;
   }
 }
 
@@ -529,7 +543,7 @@ h2 h3 {
     padding-top: 15px;
   }
   @include desktop {
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
 }
 
@@ -540,11 +554,11 @@ h2 h3 {
     order: 2;
     margin-top: -50px;
     margin-right: 0px;
-    margin-left: 600px;
+    margin-left: 37.5rem;
 
     @include desktop {
       margin-top: -100px;
-      margin-left: 1000px;
+      margin-left: 62.5rem;
     }
   }
 }
@@ -552,13 +566,22 @@ h2 h3 {
 .footer__logo {
   margin-top: 15%;
   margin-left: 7%;
+  @include tablet {
+    margin-top: 2%;
+    margin-left: 5%;
+    @include desktop {
+      margin-left: -200px;
+      margin-top: 50px;
+    }
+  }
 }
+
 .box4 {
   order: 4;
   @include tablet {
-    margin-right: 300px;
+    margin-right: 18.75rem;
     @include desktop {
-      margin-left: 35px;
+      margin-left: 2.1875rem;
     }
   }
 }

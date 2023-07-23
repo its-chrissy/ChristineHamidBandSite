@@ -28,7 +28,7 @@
   margin-top: auto;
   padding-top: 6%;
   padding-bottom: 13%;
-  padding-left: 50px;
+  padding-left: 3.125rem;
   padding-right: 2.5rem;
 }
 .headerbox .logo {
@@ -36,10 +36,16 @@
 }
 @media screen and (min-width: 768px) {
   .headerbox {
-    height: 4rem;
-    padding-top: 15px;
+    height: 2rem;
+    padding-top: 20px;
     padding-bottom: 1px;
     gap: 3%;
+    padding-left: 1px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .headerbox {
+    padding-left: 8px;
   }
 }
 
@@ -66,15 +72,13 @@
   }
 }
 
-.nav ul {
+nav ul {
   margin-top: -5px;
   display: flex;
   background-color: #323232;
   font-size: 0.9375rem;
-  color: #ffffff;
   height: 1.5rem;
   font-weight: 700;
-  list-style-type: none;
   padding-top: 1px;
   padding-bottom: 1px;
   padding-right: 6.25rem;
@@ -82,21 +86,26 @@
   gap: 80%;
   margin-right: 20px;
 }
-.nav li {
+nav li {
   margin: 1px;
   font-weight: 100;
+  list-style-type: none;
+}
+nav li a {
+  color: #ffffff;
+  text-decoration: none;
 }
 @media screen and (min-width: 768px) {
-  .nav {
-    margin-top: -27px;
-    margin-left: 250px;
-    margin-right: 200px;
+  nav {
+    margin-top: -25px;
+    margin-left: 13.75rem;
+    margin-right: 18.75rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .nav {
-    margin-left: 15rem;
-    margin-right: 43.75rem;
+  nav {
+    margin-left: 13.75rem;
+    margin-right: 34.375rem;
   }
 }
 
@@ -106,16 +115,18 @@
   height: 30vh;
   background-color: #000000;
   opacity: 85%;
+  margin-top: -20px;
 }
 @media screen and (min-width: 768px) {
   .hero {
     height: 40vh;
-    margin-top: -5%;
+    margin-top: -40px;
   }
 }
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 80vh;
+    height: 70vh;
+    margin-bottom: 70px;
   }
 }
 
@@ -168,9 +179,9 @@ h2 h3 {
 }
 @media screen and (min-width: 1024px) {
   .band__img {
-    width: 65%;
     height: 60vh;
-    margin-left: 7.1875rem;
+    width: 65%;
+    padding-left: 11rem;
   }
 }
 
@@ -182,7 +193,7 @@ h2 h3 {
 @media screen and (min-width: 768px) {
   #bryan {
     font-size: small;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
 }
 
@@ -199,7 +210,6 @@ h2 h3 {
 }
 @media screen and (min-width: 1024px) {
   .about__quote {
-    width: 58%;
     margin-left: 18%;
     font-size: large;
   }
@@ -210,12 +220,12 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   #about__musicians {
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
 }
 @media screen and (min-width: 1024px) {
   #about__musicians {
-    padding-left: 120px;
+    padding-left: 7.5rem;
     font-size: xx-large;
   }
 }
@@ -225,7 +235,7 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   .about__info--title {
-    padding-left: 60px;
+    padding-left: 3.75rem;
     font-weight: 700;
     font-size: x-large;
     color: #000000;
@@ -243,20 +253,20 @@ h2 h3 {
 @media screen and (min-width: 768px) {
   .aboutcontainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
     gap: 12%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (min-width: 1024px) {
   .aboutcontainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-left: 170px;
     gap: 6%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    font-size: small;
   }
 }
 
@@ -275,7 +285,7 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   #photo__gallery {
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -313,13 +323,14 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   .join-conversation h2 {
-    margin-left: 20px;
-    margin-top: 50px;
+    margin-left: 1.25rem;
+    margin-top: 3.125rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .join-conversation h2 {
-    margin-left: 10.625rem;
+    padding-left: 100px;
+    font-size: xx-large;
   }
 }
 
@@ -345,12 +356,12 @@ h2 h3 {
 }
 @media screen and (min-width: 1024px) {
   .join-textbox1__img img {
-    margin-left: 300px;
+    margin-left: 250px;
   }
 }
 
 .join-textbox1__name {
-  padding-left: 90px;
+  padding-left: 5.625rem;
 }
 .join-textbox1__name p {
   color: #afafaf;
@@ -359,18 +370,18 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   .join-textbox1__name p {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     margin-top: -50px;
   }
 }
 @media screen and (min-width: 1024px) {
   .join-textbox1__name p {
-    margin-left: 300px;
+    margin-left: 235px;
   }
 }
 
 .join-textbox1__comment {
-  padding-left: 90px;
+  padding-left: 5.625rem;
 }
 .join-textbox1__comment p {
   color: #afafaf;
@@ -379,12 +390,12 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   .join-textbox1__comment p {
-    margin-left: 30px;
+    margin-left: 1.875rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .join-textbox1__comment p {
-    margin-left: 300px;
+    margin-left: 235px;
   }
 }
 
@@ -396,14 +407,14 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   .textarea_name {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     width: 85%;
   }
 }
 @media screen and (min-width: 1024px) {
   .textarea_name {
-    margin-left: 300px;
-    width: 40%;
+    margin-left: 235px;
+    width: 47%;
   }
 }
 
@@ -415,39 +426,40 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) {
   .textarea_comment {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     width: 85%;
   }
 }
 @media screen and (min-width: 1024px) {
   .textarea_comment {
-    margin-left: 300px;
-    width: 40%;
+    margin-left: 235px;
+    width: 47%;
   }
 }
 
 .textbox__comment-btn button {
-  margin-left: 90px;
+  margin-left: 5.625rem;
   background-color: #323232;
   color: #fafafa;
   width: 15.6rem;
   height: 2.3125rem;
   border-radius: 5px;
   border-color: #323232;
-  margin-bottom: 10px;
+  margin-bottom: 1.5625rem;
+  margin-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .textbox__comment-btn button {
-    width: 200px;
-    margin-left: 525px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    width: 160px;
+    width: 12.5rem;
+    margin-left: 32.8125rem;
+    margin-bottom: 1.875rem;
+    margin-top: 1.25rem;
+    width: 10rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .textbox__comment-btn button {
-    margin-left: 43.75rem;
+    margin-left: 600px;
   }
 }
 
@@ -459,8 +471,8 @@ h2 h3 {
 }
 @media screen and (min-width: 1024px) {
   .comments__box {
-    padding-right: 25rem;
-    padding-left: 25rem;
+    padding-right: 15rem;
+    padding-left: 15rem;
   }
 }
 
@@ -486,7 +498,7 @@ h2 h3 {
 }
 @media screen and (min-width: 1024px) {
   .comments__namedate {
-    gap: 31.875rem;
+    gap: 300px;
   }
 }
 
@@ -504,6 +516,11 @@ h2 h3 {
 }
 .comments__content {
   margin-left: 3.125rem;
+}
+@media screen and (min-width: 1024px) {
+  .comments__content {
+    width: 497px;
+  }
 }
 
 .footer__section {
@@ -561,7 +578,7 @@ h2 h3 {
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
   .socials {
-    padding-left: 1%;
+    padding-left: 6%;
     margin-left: 35%;
     width: 35%;
   }
@@ -569,7 +586,7 @@ h2 h3 {
 
 .names {
   padding-left: 23px;
-  width: 220px;
+  width: 13.75rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -592,10 +609,10 @@ h2 h3 {
 }
 @media screen and (min-width: 1024px) {
   .box2 {
-    gap: 30px;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    margin-left: 50px;
+    gap: 1.875rem;
+    padding-top: 3.75rem;
+    padding-bottom: 1.875rem;
+    margin-left: 2.5rem;
   }
 }
 
@@ -611,7 +628,7 @@ h2 h3 {
 }
 @media screen and (min-width: 1024px) {
   .contact1 {
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
 }
 
@@ -624,13 +641,13 @@ h2 h3 {
     order: 2;
     margin-top: -50px;
     margin-right: 0px;
-    margin-left: 600px;
+    margin-left: 37.5rem;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
   .box3 {
     margin-top: -100px;
-    margin-left: 1000px;
+    margin-left: 62.5rem;
   }
 }
 
@@ -638,18 +655,30 @@ h2 h3 {
   margin-top: 15%;
   margin-left: 7%;
 }
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  .footer__logo {
+    margin-left: -200px;
+    margin-top: 50px;
+  }
+}
 
 .box4 {
   order: 4;
 }
 @media screen and (min-width: 768px) {
   .box4 {
-    margin-right: 300px;
+    margin-right: 18.75rem;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
   .box4 {
-    margin-left: 35px;
+    margin-left: 2.1875rem;
   }
 }
 
