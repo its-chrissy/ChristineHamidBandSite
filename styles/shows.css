@@ -226,6 +226,44 @@ h2 h3 {
   color: #323232;
 }
 
+.show__date {
+  color: #afafaf;
+  font-size: small;
+}
+
+.show__venue {
+  color: #afafaf;
+  font-size: small;
+}
+
+.show__location {
+  color: #afafaf;
+  font-size: small;
+}
+
+.show__venue--data {
+  font-weight: 400;
+}
+
+.show__location--data {
+  font-weight: 400;
+}
+
+.show__button--btn {
+  margin-left: 20px;
+  background-color: #323232;
+  color: #fafafa;
+  width: 310px;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 1.5625rem;
+  margin-top: 10px;
+}
+
+.show__card {
+  border-bottom: 1.5px solid #afafaf;
+}
+
 .footer__section {
   background-color: #323232;
   color: #ffffff;

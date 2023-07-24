@@ -188,7 +188,45 @@ h2 h3 {
   color: $bandsiteblack;
 }
 
-//*shows--section*//
+.show__date {
+  color: $silver;
+  font-size: small;
+}
+
+.show__venue {
+  color: $silver;
+  font-size: small;
+}
+
+.show__location {
+  color: $silver;
+  font-size: small;
+}
+
+.show__venue--data {
+  font-weight: 400;
+}
+
+.show__location--data {
+  font-weight: 400;
+}
+
+.show__button--btn {
+  margin-left: 20px;
+  background-color: #323232;
+  color: #fafafa;
+  width: 310px;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 1.5625rem;
+  margin-top: 10px;
+}
+
+.show__card {
+  border-bottom: 1.5px solid $silver;
+}
+
+//*end of shows--section*//
 
 //*footer*//
 .footer__section {
