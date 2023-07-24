@@ -1,37 +1,37 @@
 // Concerts shows array
 
-let shows = [
-  {
-    date: "Tue Sept 21 2021 ",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021 ",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021 ",
-    venue: "View Lounge ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021 ",
-    venue: "Hyatt Agency ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021 ",
-    venue: "Press Club ",
-    location: "San Francisco, CA",
-  },
-];
+// let shows = [
+//   {
+//     date: "Tue Sept 21 2021 ",
+//     venue: "Ronald Lane",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri Oct 15 2021 ",
+//     venue: "Pier 3 East",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri Oct 15 2021 ",
+//     venue: "View Lounge ",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Sat Nov 06 2021 ",
+//     venue: "Hyatt Agency ",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri Nov 26 2021",
+//     venue: "Moscow Center ",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Wed Dec 15 2021 ",
+//     venue: "Press Club ",
+//     location: "San Francisco, CA",
+//   },
+// ];
 
 function displayShows(arr) {
   let showsContainer = document.querySelector(".shows__container"); // <---parent
@@ -122,4 +122,17 @@ function displayShows(arr) {
 }
 
 // Display the default shows when the page loads
-displayShows(shows);
+// displayShows(shows);
+
+//using API//
+
+let shows = axios.get(
+  "https://project-1-api.herokuapp.com/showdates?api_key=d6bfb720-74e1-440f-a299-cef7d6ca1c6e"
+);
+shows.then((response) => {
+    displayShows(response.data);
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.log("error");
+  });

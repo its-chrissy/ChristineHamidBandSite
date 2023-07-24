@@ -1,37 +1,32 @@
-let comments = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    comment:
-      "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    image: "./assets/Images/face2.jpg",
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What incredible day.",
-    image: "./assets/Images/face1.jpg",
-  },
-  {
-    name: "Miles Acosta",
-    date: "12/20/2021",
-    comment:
-      "I can t stop listening. Every time I hearone of their songs - the vocals - it gives me goosebumps. Shivers straight downmy spine. What a beautiful expression of creativity. Can t get enough.",
-    image: "./assets/Images/face2.jpg",
-  },
-];
+// let comments = [
+//   {
+//     name: "Connor Walton",
+//     date: "02/17/2021",
+//     comment:
+//       "This is art. This is inexplicable magic  expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+//     image: "./assets/Images/face2.jpg",
+//   },
+//   {
+//     name: "Emilie Beach",
+//     date: "01/09/2021",
+//     comment:
+//       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What incredible day.",
+//     image: "./assets/Images/face1.jpg",
+//   },
+//   {
+//     name: "Miles Acosta",
+//     date: "12/20/2021",
+//     comment:
+//       "I can t stop listening. Every time I hearone of their songs - the vocals - it gives me goosebumps. Shivers straight downmy spine. What a beautiful expression of creativity. Can t get enough.",
+//     image: "./assets/Images/face2.jpg",
+//   },
+// ];
 let parentEl = document.querySelector(".comments__box");
+let comments = [];
 
-const displayComments = () => {
-  console.log(comments);
+const displayComments = (comments) => {
+  parentEl.innerHTML = "";
 
-  // Show all the default comments
-
-  // Step 1 : Get the parent element class="comments__box">
-
-  // Step 2 : Create comment__item for no. of comments
-  let commentItem = "";
   comments.forEach((comment) => {
     let commentItem = document.createElement("div"); // -- parent
     commentItem.classList.add("comments__item");
@@ -75,6 +70,23 @@ const displayComments = () => {
   });
 };
 
+const getComments = () => {
+  const apiUrl =
+    "https://project-1-api.herokuapp.com/comments?api_key=d6bfb720-74e1-440f-a299-cef7d6ca1c6e";
+
+  axios
+    .get(apiUrl)
+    .then((response) => {
+      comments = response.data;
+      displayComments(comments);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+getComments();
+
 // Add the new comment at the beginning of the array (newest at the top)
 const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
@@ -91,12 +103,30 @@ form.addEventListener("submit", (event) => {
       image: "./assets/Images/face3.jpg",
     };
 
-    comments.unshift(newComment);
-    parentEl.innerText = "";
-    displayComments();
-    clearInput();
+    axios
+      .post(
+        "https://project-1-api.herokuapp.com/comments?api_key=d6bfb720-74e1-440f-a299-cef7d6ca1c6e",
+        newComment
+      )
+      .then((response) => {
+        const createdComment = response.data;
+        comments.unshift(createdComment); // Add the new comment to the beginning of the array
+        parentEl.innerHTML = "";
+        displayComments(comments); // Pass the updated comments array to display
+        clearInput();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 });
+
+//     comments.unshift(newComment);
+//     parentEl.innerText = "";
+//     displayComments();
+//     clearInput();
+//   }
+// });
 
 // Function to format the date as "month/day/year"
 const formatDate = (date) => {
@@ -113,4 +143,4 @@ const clearInput = () => {
 };
 
 // Display the default comments when the page loads
-displayComments();
+// displayComments();
