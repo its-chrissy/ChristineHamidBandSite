@@ -191,11 +191,17 @@ h2 h3 {
 .show__date {
   color: $silver;
   font-size: small;
+  @include tablet {
+    padding-left: 10px;
+  }
 }
 
 .show__venue {
   color: $silver;
   font-size: small;
+  @include tablet {
+    padding-left: 100px;
+  }
 }
 
 .show__location {
@@ -203,12 +209,35 @@ h2 h3 {
   font-size: small;
 }
 
+.show__date--data {
+  @include tablet {
+    font-size: small;
+    padding-top: 30px;
+    margin-left: -50px;
+  }
+}
+
 .show__venue--data {
   font-weight: 400;
+  @include tablet {
+    font-size: small;
+    padding-top: 30px;
+    margin-right: 60px;
+    font-weight: 700;
+    @include desktop {
+    }
+  }
 }
 
 .show__location--data {
   font-weight: 400;
+  @include tablet {
+    font-size: small;
+    padding-top: 30px;
+    font-weight: 700;
+    @include desktop {
+    }
+  }
 }
 
 .show__button--btn {
@@ -220,12 +249,48 @@ h2 h3 {
   border-radius: 5px;
   margin-bottom: 1.5625rem;
   margin-top: 10px;
+  @include tablet {
+    width: 130px;
+    margin-right: 50px;
+  }
+  @include desktop {
+    width: 150px;
+    margin-left: 170px;
+  }
+}
+
+.show__button {
+  @include tablet {
+    padding-top: 20px;
+  }
 }
 
 .show__card {
   border-bottom: 1.5px solid $silver;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+  }
+  @include desktop {
+    width: 655px;
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    width: 700px;
+    padding-left: 210px;
+  }
 }
 
+.shows__header--container {
+  @include tablet {
+    padding-left: 10px;
+  }
+}
 //*end of shows--section*//
 
 //*footer*//

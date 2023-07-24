@@ -230,10 +230,20 @@ h2 h3 {
   color: #afafaf;
   font-size: small;
 }
+@media screen and (min-width: 768px) {
+  .show__date {
+    padding-left: 10px;
+  }
+}
 
 .show__venue {
   color: #afafaf;
   font-size: small;
+}
+@media screen and (min-width: 768px) {
+  .show__venue {
+    padding-left: 100px;
+  }
 }
 
 .show__location {
@@ -241,14 +251,35 @@ h2 h3 {
   font-size: small;
 }
 
+@media screen and (min-width: 768px) {
+  .show__date--data {
+    font-size: small;
+    padding-top: 30px;
+    margin-left: -50px;
+  }
+}
+
 .show__venue--data {
   font-weight: 400;
 }
-
+@media screen and (min-width: 768px) {
+  .show__venue--data {
+    font-size: small;
+    padding-top: 30px;
+    margin-right: 60px;
+    font-weight: 700;
+  }
+}
 .show__location--data {
   font-weight: 400;
 }
-
+@media screen and (min-width: 768px) {
+  .show__location--data {
+    font-size: small;
+    padding-top: 30px;
+    font-weight: 700;
+  }
+}
 .show__button--btn {
   margin-left: 20px;
   background-color: #323232;
@@ -259,9 +290,54 @@ h2 h3 {
   margin-bottom: 1.5625rem;
   margin-top: 10px;
 }
+@media screen and (min-width: 768px) {
+  .show__button--btn {
+    width: 130px;
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .show__button--btn {
+    width: 150px;
+    margin-left: 170px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .show__button {
+    padding-top: 20px;
+  }
+}
 
 .show__card {
   border-bottom: 1.5px solid #afafaf;
+}
+@media screen and (min-width: 768px) {
+  .show__card {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .show__card {
+    width: 655px;
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    width: 700px;
+    padding-left: 210px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows__header--container {
+    padding-left: 10px;
+  }
 }
 
 .footer__section {
